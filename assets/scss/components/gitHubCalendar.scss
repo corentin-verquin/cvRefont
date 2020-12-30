@@ -1,0 +1,20 @@
+.gitHubCalendar {
+  margin: -1.5rem;
+
+  .contrib-legend,
+  .contrib-footer {
+    display: none;
+  }
+  .position-relative {
+    margin: 0.4rem;
+  }
+
+  &-container {
+    margin-top: 2rem;
+  }
+  &-title {
+    margin-bottom: 2rem;
+    font-size: #{pxtorem(18)}rem;
+    font-weight: 700;
+  }
+}
