@@ -1,0 +1,54 @@
+.navbar {
+  background-color: var(--primary-color);
+  transition: background-color var(--background-time);
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: var(--navbar-link);
+    text-decoration: none;
+    font-size: #{pxtorem(20)}rem;
+    font-weight: 700;
+    margin-right: 1.5rem;
+  }
+
+  &__switcher {
+    margin-left: #{pxtorem(16)}rem;
+    input {
+      display: none;
+    }
+
+    label {
+      background-color: color('card-background', 'dark');
+      padding: 0.2rem;
+      border-radius: #{pxtorem(32)}rem;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      font-size: #{pxtorem(20)}rem;
+
+      &::before {
+        position: absolute;
+        content: '';
+        background-color: color('color-white');
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        transition: transform 0.4s;
+      }
+    }
+
+    input:checked + label {
+      &::before {
+        transform: translate(34px, -50%);
+      }
+    }
+  }
+}
