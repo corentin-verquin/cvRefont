@@ -1,0 +1,32 @@
+@import '~reset-css/sass/reset';
+
+@include setTheme();
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif !important;
+}
+
+html {
+  font-size: #{pxtorem(16)}rem;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  transition: background-color var(--background-time);
+}
+
+:root {
+  --background-time: 0.02s ease-in;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 98%;
+  padding: 1rem 0;
+  @include respond-above('sm') {
+    width: 85%;
+  }
+  @include respond-above('md') {
+    width: 70%;
+  }
+}

@@ -1,55 +1,38 @@
-<template>
-  <div>
-    <Nuxt />
-  </div>
+<template lang="pug">
+  section  
+    nav.navbar
+      .navbar__switcher
+        input(v-model="darkMode", type="checkbox", @change="changeMode()", aria-hidden="true", id="switch")
+        label(for="switch", aria-hidden="true")
+          span 🌙
+          span 🌞
+      .navbar__link
+        nuxt-link(to="/") Accueil      
+        nuxt-link(to="/project") Projets      
+    main   
+      Nuxt  
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
+@Component
+export default class Default extends Vue {
+  darkMode: boolean = false
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  beforeMount() {
+    this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+  changeMode() {
+    document.documentElement.dataset.mode = this.darkMode ? 'dark' : 'light'
+  }
 }
+</script>
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+<style lang="scss">
+@import '../assets/scss/config';
+@import '../assets/scss/layout';
+@import '../assets/scss/components/navbar';
+@import '../assets/scss/components/gitHubCalendar';
 </style>
