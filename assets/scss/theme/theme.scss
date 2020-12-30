@@ -1,0 +1,9 @@
+@import './color-theme';
+@import './link-theme';
+@import './github-contribution-theme';
+
+@mixin setTheme() {
+  @include build-color();
+  @include build-link();
+  @include build-github();
+}

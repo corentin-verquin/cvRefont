@@ -1,0 +1,20 @@
+@mixin build-link() {
+  a {
+    color: black;
+    @media (prefers-color-scheme: dark) {
+      color: white;
+    }
+  }
+
+  [data-mode='light'] {
+    a {
+      color: black;
+    }
+  }
+
+  [data-mode='dark'] {
+    a {
+      color: white;
+    }
+  }
+}

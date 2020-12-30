@@ -1,0 +1,50 @@
+$colors: (
+  'font-color': (
+    'light': #000,
+    'dark': #f5f6f7,
+  ),
+  'background-color': (
+    'light': #fff,
+    'dark': #18191a,
+  ),
+  'primary-color': (
+    'light': #f2c02d,
+    'dark': #1a8870,
+  ),
+  'color-grey': (
+    'light': #5b5b5b,
+    'dark': #cccfd0,
+  ),
+  'color-grey-30': (
+    'light': lighten(#777, 30),
+    'dark': #cccfd0,
+  ),
+  'color-grey-40': (
+    'light': lighten(#777, 40),
+    'dark': #cccfd0,
+  ),
+  'color-white': (
+    'light': #fff,
+    'dark': #000,
+  ),
+  'navbar-link': (
+    'light': #383333,
+    'dark': #fff,
+  ),
+  'card-background': (
+    'light': #fff,
+    'dark': #242526,
+  ),
+  'tooltip-background': (
+    'light': #000,
+    'dark': #1a8870,
+  ),
+);
+
+@function color($color, $mode: 'light') {
+  @if (type-of($color) == 'map') {
+    @return #{map-get($color, $mode)};
+  } @else {
+    @return #{map-get(map-get($colors, $color), $mode)};
+  }
+}

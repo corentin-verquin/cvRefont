@@ -1,0 +1,18 @@
+@mixin build-color() {
+  @each $name, $color in $colors {
+    :root {
+      --#{$name}: #{color($color)};
+      @media (prefers-color-scheme: dark) {
+        --#{$name}: #{color($color, 'dark')};
+      }
+    }
+
+    [data-mode='light'] {
+      --#{$name}: #{color($color)} !important;
+    }
+
+    [data-mode='dark'] {
+      --#{$name}: #{color($color, 'dark')} !important;
+    }
+  }
+}

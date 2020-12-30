@@ -1,0 +1,46 @@
+@mixin build-github() {
+  $base: (
+    'bg': #dddbdb,
+    'L1-bg': #39dd34,
+  );
+
+  $dark: (
+    'bg': #18191a,
+    'L1-bg': #1a8870,
+  );
+
+  @each $name, $color in $base {
+    [data-mode='light'] {
+      --color-calendar-graph-day-#{$name}: #{$color} !important;
+    }
+  }
+
+  @each $name, $color in $dark {
+    [data-mode='dark'] {
+      --color-calendar-graph-day-#{$name}: #{$color} !important;
+    }
+    :root {
+      @media (prefers-color-scheme: dark) {
+        --color-calendar-graph-day-#{$name}: #{$color};
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .gitHubCalendar .contrib-number {
+      color: white;
+    }
+  }
+
+  [data-mode='dark'] {
+    .gitHubCalendar .contrib-number {
+      color: white !important;
+    }
+  }
+
+  [data-mode='light'] {
+    .gitHubCalendar .contrib-number {
+      color: #333 !important;
+    }
+  }
+}
