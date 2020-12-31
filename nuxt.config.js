@@ -117,6 +117,6 @@ export default {
     GRAPHQL_ENDPOINT: graphqlRoute,
   },
   env: {
-    apiRoute,
+    apiRoute: process.env.NODE_ENV === 'production' ? '' : apiRoute,
   },
 }
