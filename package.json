@@ -27,7 +27,7 @@
     "@nuxtjs/composition-api": "^0.17.0",
     "@nuxtjs/markdownit": "^1.2.10",
     "core-js": "^3.6.5",
-    "markdown-it-attrs": "^3.0.3",
+    "markdown-it-attrs": "^4.0.0",
     "nuxt": "^2.14.6",
     "nuxt-property-decorator": "^2.8.8",
     "vue-property-decorator": "^9.1.2"
