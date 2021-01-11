@@ -6,3 +6,4 @@ pull_request_rules:
     actions:
       comment:
         message: '@dependabot merge'
+        bot_account: corentin-verquin
