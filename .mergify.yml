@@ -4,6 +4,5 @@ pull_request_rules:
       - author~=^dependabot(|-preview)\[bot\]$
       - check-success=netlify/stupefied-cray-130f5a/deploy-preview
     actions:
-      comment:
-        message: '@dependabot merge'
-        bot_account: corentin-verquin
+      merge:
+        method: merge
