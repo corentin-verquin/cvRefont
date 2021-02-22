@@ -35,7 +35,7 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@nuxt/types": "^2.15.0",
+    "@nuxt/types": "^2.15.1",
     "@nuxt/typescript-build": "^2.0.5",
     "@nuxtjs/eslint-config": "^5.0.0",
     "@nuxtjs/eslint-config-typescript": "^5.0.0",
