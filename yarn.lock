@@ -8464,10 +8464,10 @@ num2fraction@^1.2.2:
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
 
-nuxt-graphql-request@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/nuxt-graphql-request/-/nuxt-graphql-request-3.2.1.tgz#760e501c84529bd74afa7fbe00f3d0f2c063e58d"
-  integrity sha512-OevF/nUdBWSTwbif0J+QEhDYi5563wvYS5jF31fHG2E5Wr5pINI4YGuO86uROxdUzpJKkInFLjRFxE1u7d4l7A==
+nuxt-graphql-request@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-graphql-request/-/nuxt-graphql-request-4.0.0.tgz#c75b05c2d4723666aaf158d1bf8471c6384bb242"
+  integrity sha512-EY04g/jSlQcMSOiHrZIDBKC33tS49/NVwwRKRqvSOQXdsNW36doPUlvD1glOkP3kvT/8D4/4W6idS7zmwXaaxg==
   dependencies:
     cross-fetch "^3.0.6"
     graphql-request "^3.4.0"
