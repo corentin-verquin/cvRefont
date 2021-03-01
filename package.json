@@ -59,7 +59,7 @@
     "postcss-combine-duplicated-selectors": "9.4.0",
     "postcss-combine-media-query": "^1.0.1",
     "prettier": "^2.1.2",
-    "pug": "^3.0.0",
+    "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
     "reset-css": "^5.0.1",
     "sass": "^1.32.8",
