@@ -101,7 +101,11 @@ export default {
 
   // https://www.npmjs.com/package/nuxt-graphql-request
   graphql: {
-    endpoint: graphqlRoute,
+    clients: {
+      default: {
+        endpoint: graphqlRoute,
+      },
+    },
   },
 
   // https://www.npmjs.com/package/@nuxtjs/markdownit
@@ -114,7 +118,13 @@ export default {
   },
 
   publicRuntimeConfig: {
-    GRAPHQL_ENDPOINT: graphqlRoute,
+    graphql: {
+      clients: {
+        default: {
+          endpoint: graphqlRoute,
+        },
+      },
+    },
   },
   env: {
     apiRoute: process.env.NODE_ENV === 'production' ? '' : apiRoute,

@@ -22,7 +22,7 @@ export async function fetchProject($graphql: any) {
     }
   `
 
-  const res = await $graphql.request(query)
+  const res = await $graphql.default.request(query)
   return res.project.Projects.map((x: any) => {
     x.Image = x.Image.formats.small.url
     x.Technos = x.Technos.map((t: any) => {

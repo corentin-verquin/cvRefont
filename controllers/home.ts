@@ -42,8 +42,7 @@ export async function fetchHome($graphql: any) {
         }
       }
     }
-  `
-
-  const res = await $graphql.request(query)
+  `  
+  const res = await $graphql.default.request(query)
   return res.home
 }
